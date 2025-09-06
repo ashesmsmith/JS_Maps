@@ -1,10 +1,11 @@
-// Initialize and add the map
+// Initialize and add the map to index.html
 let map;
+let marker;
 
 // 'async' allows us to wait for the map library to load
 async function initMap() {
     // Location coordinates for Rexburg, ID - Shown on map load
-    const position = { lat: 43.8283592, lng: -111.8753124};
+    const position = { lat: 43.8231, lng: -111.7924 };
 
     // Request 'maps' and 'marker' libraries from the Google Maps API
     // 'await' makes sure the library is loaded before continuing
@@ -21,7 +22,7 @@ async function initMap() {
     });
 
     // Add a marker to the map at the specified position
-    const marker = new AdvancedMarkerElement({
+    marker = new AdvancedMarkerElement({
         map: map,
         position: position,
         title: "Rexburg, ID"

@@ -14,7 +14,7 @@
   a.nonce=m.querySelector("script[nonce]")?.nonce||"";
   m.head.append(a)}));
   d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-  key: "YOUR_API_KEY_HERE",
+  key: "AIzaSyCQ1Bk1qfMr_YBQp_EHkRU4z8mYqDmF0Us",
   v: "weekly",
   // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
   // Add other bootstrap parameters as needed, using camel case.
