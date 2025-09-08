@@ -10,16 +10,37 @@
 
 <body>
     <main>
-        <h1>Welcome to JS Maps!</h1>
+        <h1>Itinerary Planner</h1>
+
+        <div id="location-input">
+            <h2>Location Input</h2>
+            <p>Please enter a location name and address to add to the itinerary.</p>
+
+            <label for="nickname">Location Nickname:</label>
+            <input type="text" id="nickname" placeholder="Nickname for Location" required>
+            
+            <label for="Street-address">Location:</label>
+            <input type="text" id="location" placeholder="Full address or city and state" required>
+
+            <button id="add-btn" type="submit">Add Location</button>
+        </div>
+
+        <div id="create-itinerary">
+            <h2>Itinerary</h2>
+            <ul id="locations-list">
+                <!-- List of locations will be added here -->
+            </ul>
+
+            <button id="create-itinerary-btn">Create Itinerary</button>
+        </div>
+
+        <!-- Total Distance and Duration calculated in main.js -->
+        <h3>Total Distance: <span id="total-distance"></span></h3>
+        <h3>Total Duration: <span id="total-duration"></span></h3>
 
         <div id="map">
             <!-- Google Map will be displayed here using map-load.js -->
         </div>
-
-        <h2>Address Input</h2>
-        <input type="text" id="address_1" placeholder="Enter an address">
-        <input type="text" id="address_2" placeholder="Enter an address">
-        <button id="search-btn">Search Driving Route</button>
     </main>
 
     <!-- JavaScript -->

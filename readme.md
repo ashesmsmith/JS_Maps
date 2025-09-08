@@ -16,12 +16,18 @@
 Visual Studio Code
 
 {Describe the programming language that you used and any libraries.}
-JavaScript
-Google Map API
+HTML - CSS - JavaScript
+Google Maps API
+Google Directions API
+Google Geocoder API
 
 # Useful Websites
 
-- Google Maps Platform - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#map
+- Google Maps Platform - Get Started - https://developers.google.com/maps/documentation/javascript
+
+- Google Maps Platform - Directions Service - https://developers.google.com/maps/documentation/javascript/legacy/directions
+
+- Google Maps Platform - Geocoder - https://developers.google.com/maps/documentation/javascript/reference/geocoder
 
 # Future Work
 

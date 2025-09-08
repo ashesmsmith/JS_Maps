@@ -1,3 +1,5 @@
+/* Basic CSS styles for the webpage */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,10 +7,42 @@
     font-family: Lucida Sans;
 }
 
+main {
+    padding: 1rem 2rem;
+}
+
 h1 {
     text-align: center;
-    margin: 2rem auto;
     padding: 1rem;
+}
+
+h2 {
+    padding: .5rem 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+input {
+    display: block;
+    margin: .5rem 0 1.5rem 0;
+    width: 50%;
+    height: auto;
+}
+
+button {
+    display: block;
+    background-color: darkgreen;
+    color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid darkgreen;
 }
 
 #map {
