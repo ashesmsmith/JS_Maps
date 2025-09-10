@@ -12,11 +12,14 @@ main {
 }
 
 h1 {
+    font-family: Garamond;
     text-align: center;
+    letter-spacing: .2rem;
     padding: 1rem;
 }
 
 h2 {
+    font-family: Garamond;
     padding: .5rem 0;
 }
 
@@ -29,11 +32,26 @@ p {
     line-height: 1.5;
 }
 
+#location-input, #create-itinerary {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+}
+
+label {
+    margin: 1rem 0 .5rem 0;
+    font-weight: bold;
+}
+
 input {
     display: block;
     margin: .5rem 0 1.5rem 0;
+    padding: 1rem;
     width: 50%;
     height: auto;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
 }
 
 button {
@@ -42,7 +60,16 @@ button {
     color: white;
     margin: 1rem 0;
     padding: 1rem;
-    border: 2px solid darkgreen;
+    border: navajowhite;
+    border-radius: 10px;
+}
+
+ul {
+    margin: 1rem;
+}
+
+li {
+    margin: .5rem;
 }
 
 #map {
@@ -50,4 +77,5 @@ button {
     height: 500px;
     width: 80%;
     border: 5px solid darkgreen;
+    border-radius: 10px;
 }

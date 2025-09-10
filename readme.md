@@ -1,10 +1,8 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+The JS Maps program uses multiple Google Maps APIs and JavaScript to create a Travel Itinerary from users inputs. The user will input the desired locations and the program will calculate the route which is displayed on a map. The user entered locations are also displayed as a list. The distance and duration are calculated and displayed.
 
-{Provide a description of the software that you wrote to demonstrate the JavaScript language.}
-
-{Describe your purpose for writing this software.}
+This program was written for the purpose of creating a visual and custom Travel Itinerary with expected travel distance and duration.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
@@ -12,16 +10,19 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
 Visual Studio Code
+GitHub Pages
 
-{Describe the programming language that you used and any libraries.}
-HTML - CSS - JavaScript
+HTML
+CSS
+JavaScript
 Google Maps API
 Google Directions API
 Google Geocoder API
 
 # Useful Websites
+
+- JavaScript Documentation - https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 - Google Maps Platform - Get Started - https://developers.google.com/maps/documentation/javascript
 
@@ -31,8 +32,6 @@ Google Geocoder API
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Better restrict the API Key
+- Add the ability to remove and/or rearrange locations
+- Add distance and duration calculation to each 'leg' of the route when there are more than 2 locations entered.
