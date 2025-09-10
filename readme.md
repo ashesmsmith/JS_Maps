@@ -4,9 +4,9 @@ The JS Maps program uses multiple Google Maps APIs and JavaScript to create a Tr
 
 This program was written for the purpose of creating a visual and custom Travel Itinerary with expected travel distance and duration.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
 [Software Demo Video](http://youtube.link.goes.here)
+
+[Itinerary Planner Website](https://ashesmsmith.github.io/JS_Maps/)
 
 # Development Environment
 
@@ -35,3 +35,4 @@ Google Geocoder API
 - Better restrict the API Key
 - Add the ability to remove and/or rearrange locations
 - Add distance and duration calculation to each 'leg' of the route when there are more than 2 locations entered.
+- Add location suggestions as user begins typing - Autocomplete
