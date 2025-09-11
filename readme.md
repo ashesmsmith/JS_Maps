@@ -4,7 +4,7 @@ The JS Maps program uses multiple Google Maps APIs and JavaScript to create a Tr
 
 This program was written for the purpose of creating a visual and custom Travel Itinerary with expected travel distance and duration for driving.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/kWOBVsPO4xo)
 
 [Itinerary Planner Website](https://ashesmsmith.github.io/JS_Maps/)
 
@@ -36,7 +36,7 @@ SortableJS
 # Future Work
 
 - Better restrict the API Key
-- Add the ability to remove and rearrange locations
+- Add the ability to remove locations
 - Add location suggestions (Autocomplete) to prevent location errors/mismatch
 - Add ability to view the specific directions (Ex: turn left on Main St.)
 - Add travel options such as walking, boat, and flight
