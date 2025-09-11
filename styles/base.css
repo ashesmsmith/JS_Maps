@@ -60,16 +60,20 @@ button {
     color: white;
     margin: 1rem 0;
     padding: 1rem;
-    border: navajowhite;
+    border: darkgreen;
     border-radius: 10px;
 }
 
 ul {
+    list-style-type: none;
     margin: 1rem;
 }
 
 li {
     margin: .5rem;
+    padding: .5rem;
+    width: 50%;
+    border: 1px solid darkgreen;
 }
 
 #map {

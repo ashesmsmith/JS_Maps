@@ -27,6 +27,8 @@
 
         <div id="create-itinerary">
             <h2>Itinerary</h2>
+            <p>Drag and drop to reorder locations.</p>
+            <p>Click "Create Itinerary" to generate the route and calculate total distance and duration.</p>
             <ul id="locations-list">
                 <!-- List of locations will be added here -->
             </ul>
@@ -44,7 +46,8 @@
     </main>
 
     <!-- JavaScript -->
-    <script src="scripts/map-load.js"></script> <!-- Load Google Maps API first -->
+    <script src="scripts/map-load.js"></script> <!-- Google Maps JavaScript API - Load first -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script> <!-- SortableJS library -->
     <script src="scripts/main.js"></script>
 </body>
 </html>

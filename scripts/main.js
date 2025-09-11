@@ -1,5 +1,6 @@
 // Initialize Google Maps API - default location Rexburg, ID
 // Input from user (nickname and location) processed added to locations and markers arrays
+// SortableJS used to enable drag-and-drop sorting of locations list
 // Calculate and display route using Directions API
 // Calculate and display total distance and duration of route
 
@@ -8,14 +9,6 @@ let markers = []; // Array to hold map markers
 let locations = []; // Array to hold location data
 let directionsService;
 let directionsRenderer;
-
-// Event listener for Add Location button
-const addBtn = document.getElementById('add-btn');
-addBtn.addEventListener('click', addLocation);
-
-// Event listener for Create Itinerary button
-const createItineraryBtn = document.getElementById('create-itinerary-btn');
-createItineraryBtn.addEventListener('click', createRoute);
 
 // Initialize
 // 'async' allows us to wait for the map library to load
@@ -40,7 +33,6 @@ async function initMap() {
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer( { map: map } );
 }
-
 
 // Function to add a location based on user input
 function addLocation() {
@@ -84,9 +76,15 @@ function addLocation() {
     document.querySelector('#location').value = '';
 }
 
-
 // Function to create and display the route
 function createRoute() {
+    // Sync locations array with drag-and-drop order
+    syncLocations();
+
+    // Clear previous route from map
+    directionsRenderer.set('directions', null);
+
+    // Check that there are at least 2 locations or return alert
     if (locations.length < 2) {
         alert("Please add at least two locations to create a route.");
         return;
@@ -132,6 +130,21 @@ function createRoute() {
     )
 }
 
+// Sync locations array with drag-and-drop order before creating route
+function syncLocations() {
+    const listLocations = document.querySelectorAll('#locations-list li');
+    const newLocationsOrder = [];
+
+    listLocations.forEach(item => {
+        const nickname = item.textContent;
+        const location = locations.find(l => l.nickname === nickname); // Find location by nickname
+        if (location) {
+            newLocationsOrder.push(location); // Add to new order array if found
+        }
+    });
+
+    locations = newLocationsOrder;
+}
 
 // Function to calculate total distance in miles
 function calculateDistance(distances, i = 0) {
@@ -141,7 +154,6 @@ function calculateDistance(distances, i = 0) {
     // Recursion - add current distance conversion to the sum of the rest
     return (distances[i] * 0.00062137) + calculateDistance(distances, i + 1);
 }
-
 
 // Function to calculate total time in minutes
 function calculateDuration(durations, i = 0) {
@@ -165,6 +177,28 @@ function calculateDuration(durations, i = 0) {
 
     return duration;
 }
+
+// Event Listeners
+// Add Location Button
+// Adds the location from user input to the itinerary list
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', addLocation);
+
+// Create Itinerary Button
+// Creates and displays the route on the map with total distance and duration
+const createItineraryBtn = document.getElementById('create-itinerary-btn');
+createItineraryBtn.addEventListener('click', createRoute);
+
+// SortableJS
+// Enable drag-and-drop sorting of locations list
+document.addEventListener('DOMContentLoaded', () => {
+    const locationsList = document.getElementById('locations-list');
+
+    new Sortable(locationsList, {
+        animation: 150,
+        ghostClass: 'ghost'
+    });
+});
 
 // Run on page load
 window.onload = initMap;
